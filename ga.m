@@ -1,9 +1,16 @@
-function [ objIt, enIyiDeger, enIyiCozum ] = ga( alt_sinir, ust_sinir, boyut, populasyonBoyutu, caprazlamaOrani, degisimOrani, degisimYuzdesi, iterasyonSayisi, kabulSiniri )
+function [objIt, enIyiDeger, enIyiCozum,  ] = ga( alt_sinir, ust_sinir, boyut, populasyonBoyutu, caprazlamaOrani, degisimOrani, degisimYuzdesi, iterasyonSayisi, kabulSiniri )
+
+% Fonksiyonu test etmek için aþaðýdaki satýrý Matlab komut satýrýna yazmanýz yeterlidir.
 
 % [ objIt, enIyiDeger, enIyiCozum ] = ga( -1, 1, 4, 40, 0.95, 0.02, 0.09, 100, 0.005 )
 
-% Örnek çalýþma parametreleri
-% alt_sinir=-1
+% --------------------------------------
+% Hazýrlayan: Ýsmail KIRBAÞ
+% Tarih: 7 Ekim 2017
+
+%% Örnek çalýþma parametreleri
+
+% alt_sinir=-1 
 % ust_sinir=-1
 % boyut=4
 % populasyonBoyutu=40
@@ -47,7 +54,8 @@ while( (iterasyon < iterasyonSayisi) && (enIyiDeger > kabulSiniri))
         % amac fonksiyonu 
         % burada amac (X1^2 + X2^2 + ..+ Xboyut^2 = 0) denklemini saglayan en iyi X
         % degerlerini bulmaktir
-        obj(i)=sum(populasyon(i,:).^2); 
+        % obj(i)=sum(populasyon(i,:).^2*(-1)^i); 
+         obj(i)=sum(populasyon(i,:).^2); 
     end
 
     
@@ -64,4 +72,6 @@ while( (iterasyon < iterasyonSayisi) && (enIyiDeger > kabulSiniri))
 end
 plot(objIt); hold on;
 end
+
+
 
