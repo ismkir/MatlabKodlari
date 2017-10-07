@@ -1,14 +1,14 @@
 function [objIt, enIyiDeger, enIyiCozum,  ] = ga( alt_sinir, ust_sinir, boyut, populasyonBoyutu, caprazlamaOrani, degisimOrani, degisimYuzdesi, iterasyonSayisi, kabulSiniri )
 
-% Fonksiyonu test etmek için aþaðýdaki satýrý Matlab komut satýrýna yazmanýz yeterlidir.
+% Fonksiyonu test etmek icin asagidaki satiri Matlab komut satirina yazmaniz yeterlidir.
 
 % [ objIt, enIyiDeger, enIyiCozum ] = ga( -1, 1, 4, 40, 0.95, 0.02, 0.09, 100, 0.005 )
 
 % --------------------------------------
-% Hazýrlayan: Ýsmail KIRBAÞ
+% Hazirlayan: Ismail KIRBAS
 % Tarih: 7 Ekim 2017
 
-%% Örnek çalýþma parametreleri
+%% Ornek calisma parametreleri
 
 % alt_sinir=-1 
 % ust_sinir=-1
